@@ -1,0 +1,123 @@
+/* -------  */
+/* reset    */
+/* -------  */
+
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*  Reset Margins  */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Default Colors */
+.body {
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-gray: hsl(212, 45%, 89%);
+  --color-grayish-blue: hsl(220, 15%, 55%);
+  --color-dark-blue: hsl(218, 44%, 22%);
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  background-color: var(--color-grayish-blue);
+  max-width: 400px;
+  max-height: 500px;
+  margin: auto;
+  border-radius: 10%;
+  color: var(--color-dark-blue);
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  max-width: 375px;
+  margin: auto;
+  margin-top: 250px;
+  background-color: var(--color-white);
+  height: 425px;
+  width: 325px;
+  padding: 20px;
+  border-radius: 5%;
+}
+
+.inside-container {
+  max-width: 370px;
+  height: 325px;
+  width: 210px;
+  text-align: left;
+}
+
+.qr-code {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: var(--color-dark-blue);
+}
+
+.qr-code img {
+  border-radius: 10%;
+}
+
+.text p {
+  align-items: center;
+  color: var(--color-light-gray);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
